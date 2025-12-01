@@ -126,12 +126,12 @@ const Servicios = () => {
   ];
 
   return (
-    <div className="bg-white dark:bg-black min-h-screen px-4 py-4 pb-24">
-      <div className="max-w-2xl mx-auto space-y-4">
+    <div className="bg-black min-h-screen px-4 py-4 pb-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-6xl mx-auto">
         {servicios.map((servicio) => (
           <div
             key={servicio.id}
-            className="bg-gray-50 dark:bg-zinc-900 rounded-3xl overflow-hidden border border-gray-200 dark:border-zinc-800 hover:border-gray-300 dark:hover:border-zinc-700 transition-all duration-300"
+            className="bg-zinc-900/50 rounded-3xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300"
           >
             {/* Header tipo red social */}
             <div className="p-4 flex items-center gap-3">
@@ -139,7 +139,7 @@ const Servicios = () => {
                 {servicio.avatar}
               </div>
               <div>
-                <h3 className="text-black dark:text-white font-semibold text-lg">
+                <h3 className="text-white font-semibold text-lg">
                   {servicio.titulo}
                 </h3>
               </div>
@@ -147,7 +147,7 @@ const Servicios = () => {
 
             {/* Contenido principal */}
             <div className="px-4 pb-3">
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-3">
+              <p className="text-gray-400 text-sm leading-relaxed mb-3">
                 {servicio.descripcion}
               </p>
 
@@ -156,7 +156,7 @@ const Servicios = () => {
                 {servicio.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-gray-200 dark:bg-zinc-800 text-gray-600 dark:text-gray-300 text-xs rounded-full border border-gray-300 dark:border-zinc-700 hover:border-gray-400 dark:hover:border-zinc-600 transition-colors"
+                    className="px-3 py-1 bg-[#00d9ff]/10 text-[#00d9ff] text-xs rounded-full border border-[#00d9ff]/50 hover:bg-[#00d9ff]/20 transition-colors"
                   >
                     #{tag}
                   </span>
@@ -165,22 +165,22 @@ const Servicios = () => {
 
               {/* Info cards - estilo moderno */}
               <div className="grid grid-cols-2 gap-2 mb-4">
-                <div className="bg-gray-100 dark:bg-zinc-800/50 rounded-xl p-3 border border-gray-200 dark:border-zinc-800">
-                  <div className="text-gray-500 dark:text-gray-400 text-xs mb-1">Precio inicial</div>
-                  <div className="text-black dark:text-white font-bold text-lg">{servicio.precio}</div>
+                <div className="bg-black/50 rounded-xl p-3 border border-white/10">
+                  <div className="text-gray-500 text-xs mb-1">Precio inicial</div>
+                  <div className="text-white font-bold text-lg">{servicio.precio}</div>
                 </div>
-                <div className="bg-gray-100 dark:bg-zinc-800/50 rounded-xl p-3 border border-gray-200 dark:border-zinc-800">
-                  <div className="text-gray-500 dark:text-gray-400 text-xs mb-1">Entrega</div>
-                  <div className="text-black dark:text-white font-bold text-lg">{servicio.entrega}</div>
+                <div className="bg-black/50 rounded-xl p-3 border border-white/10">
+                  <div className="text-gray-500 text-xs mb-1">Entrega</div>
+                  <div className="text-white font-bold text-lg">{servicio.entrega}</div>
                 </div>
               </div>
             </div>
 
             {/* Footer con CTA */}
-            <div className="border-t border-gray-200 dark:border-zinc-800 px-4 py-3">
+            <div className="border-t border-white/10 px-4 py-3">
               <button
                 onClick={() => window.open(`https://wa.me/+56941771163?text=${encodeURIComponent(servicio.whatsappMessage)}`, '_blank')}
-                className={`w-full py-3 bg-gradient-to-r ${servicio.gradient} text-white font-semibold rounded-full hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300`}
+                className="w-full py-3 bg-transparent hover:bg-[#00d9ff]/10 text-[#00d9ff] font-bold rounded-full border-2 border-[#00d9ff] active:scale-[0.98] transition-all duration-300"
               >
                 Solicitar Servicio
               </button>
