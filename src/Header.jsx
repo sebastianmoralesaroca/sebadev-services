@@ -5,14 +5,14 @@ const Header = () => {
   const { isDark, toggleTheme } = useTheme();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-white/10 transition-colors">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black border-b border-gray-200 dark:border-white/10 transition-colors">
 
       {/* Header Content */}
       <div className="flex items-center justify-between px-4 py-3">
         {/* Back Button */}
-        <button className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors">
+        <button className="w-12 h-12 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-white/10 transition-colors">
           <svg
-            className="w-6 h-6 text-white"
+            className="w-6 h-6 text-gray-900 dark:text-white"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -27,20 +27,20 @@ const Header = () => {
         </button>
 
         {/* Username */}
-        <h1 className="text-white text-xl font-semibold tracking-tight">
+        <h1 className="text-gray-900 dark:text-white text-xl font-semibold tracking-tight">
           sebadev
         </h1>
 
         {/* Dark Mode Toggle Button */}
         <button
           onClick={toggleTheme}
-          className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-all duration-300"
+          className="w-12 h-12 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-white/10 transition-all duration-300"
           aria-label="Toggle dark mode"
         >
           {isDark ? (
             // Sol - Modo claro
             <svg
-              className="w-6 h-6 text-white"
+              className="w-6 h-6 text-gray-900 dark:text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -55,7 +55,7 @@ const Header = () => {
           ) : (
             // Luna - Modo oscuro
             <svg
-              className="w-6 h-6 text-white"
+              className="w-6 h-6 text-gray-900 dark:text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

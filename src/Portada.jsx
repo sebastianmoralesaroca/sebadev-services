@@ -2,10 +2,10 @@ import React from 'react';
 
 const Portada = () => {
   return (
-    <div className="bg-black pt-28 pb-6 px-4">
+    <div className="bg-white dark:bg-black pt-28 pb-6 px-4">
       {/* Profile Image */}
       <div className="flex justify-center mb-6">
-        <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-white/20">
+        <div className="w-36 h-36 rounded-full overflow-hidden border-2 border-gray-300 dark:border-white/20">
           <img
             src="/me.jpg"
             alt="Profile"
@@ -16,24 +16,24 @@ const Portada = () => {
 
       {/* Name and Emoji */}
       <div className="text-center mb-4">
-        <h2 className="text-white text-3xl font-bold">
+        <h2 className="text-gray-900 dark:text-white text-3xl font-bold">
           Sebastian <span className="ml-1">👋</span>
         </h2>
       </div>
 
       {/* Bio */}
       <div className="text-center mb-12 px-6">
-        <p className="text-gray-400 text-base leading-relaxed mb-1">
+        <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-1">
           Ingeniero Informatico y Software
         </p>
-        <p className="text-gray-400 text-base leading-relaxed">
+        <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
           Desarrollador Full Stack y Progrmador IA
         </p>
       </div>
 
       {/* Tagline */}
       <div className="text-center mb-6 px-6">
-        <p className="text-white text-base">
+        <p className="text-gray-900 dark:text-white text-base">
           Hablame del proyecto de tus sueños 💭
         </p>
       </div>
@@ -42,19 +42,19 @@ const Portada = () => {
       <div className="flex justify-center items-center gap-8 mb-6">
         {/* Likes */}
         <div className="text-center">
-          <div className="text-white text-2xl font-bold">+10</div>
+          <div className="text-gray-900 dark:text-white text-2xl font-bold">+10</div>
           <div className="text-gray-500 text-sm">Proyectos</div>
         </div>
 
         {/* Remixes */}
         <div className="text-center">
-          <div className="text-white text-2xl font-bold">+7</div>
+          <div className="text-gray-900 dark:text-white text-2xl font-bold">+7</div>
           <div className="text-gray-500 text-sm">Tecnologias</div>
         </div>
 
         {/* Followers */}
         <div className="text-center">
-          <div className="text-white text-2xl font-bold">+3</div>
+          <div className="text-gray-900 dark:text-white text-2xl font-bold">+3</div>
           <div className="text-gray-500 text-sm">Años Exp.</div>
         </div>
       </div>
@@ -63,7 +63,7 @@ const Portada = () => {
       <div className="px-6 flex justify-center">
         <button
           onClick={() => window.open('https://wa.me/+56941771163?text=Hola%20Sebastian%20👋', '_blank')}
-          className="w-full md:w-[400px] bg-transparent hover:bg-[#00d9ff]/10 text-[#00d9ff] text-lg font-bold py-4 rounded-full transition-all duration-300 flex items-center justify-center gap-2 border-2 border-[#00d9ff]"
+          className="w-full md:w-[400px] bg-transparent hover:bg-[#00d9ff]/10 dark:hover:bg-[#00d9ff]/10 text-[#00d9ff] text-lg font-bold py-4 rounded-full transition-all duration-300 flex items-center justify-center gap-2 border-2 border-[#00d9ff]"
         >
           {/* WhatsApp Icon SVG */}
           <svg
